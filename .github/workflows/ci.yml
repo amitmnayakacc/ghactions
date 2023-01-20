@@ -33,7 +33,12 @@ jobs:
          VERSION=6.9.1
          wget https://services.gradle.org/distributions/gradle-${VERSION}-bin.zip -P /tmp
          sudo unzip -d /opt/gradle /tmp/gradle-${VERSION}-bin.zip
-         ls
+         sudo ln -s /opt/gradle/gradle-${VERSION} /opt/gradle/latest
+         export GRADLE_HOME=/opt/gradle/latest
+         export PATH=${GRADLE_HOME}/bin:${PATH}
+    - name: List gradle version
+      run: |
+         gradle -version
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
