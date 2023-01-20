@@ -41,6 +41,5 @@ jobs:
          gradle -version
     - name: Build with Gradle
       run: |
-        cd
-        ls -laRt
+         pwd
 
