@@ -1,4 +1,3 @@
-archivesBaseName = 'gradle-hello'
 mainClassName = 'com.bladejava.hello.HelloApplication'
 
 //buildscript {
