@@ -41,5 +41,6 @@ jobs:
          gradle -version
     - name: Build with Gradle
       run: |
-        gradle build
+        cd
+        ls -laRt
 
